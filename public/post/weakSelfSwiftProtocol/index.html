@@ -1,0 +1,230 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Pete Smith">
+		<meta name="description" content="Describe your website">
+		<meta name="generator" content="Hugo 0.17" />
+		<title>Referencing a weak ‘self’ in Swift Protocol Extensions &middot; Pete Smith</title>
+		<link rel="shortcut icon" href="https://petethedeveloper.comimages/favicon.ico">
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/style.css">
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://petethedeveloper.com'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='https://petethedeveloper.comabout'>About</a>
+	
+
+	
+		<a href='https://petethedeveloper.comapps'>Apps</a>
+	
+
+	
+		<a href='https://petethedeveloper.comopensource'>Open source</a>
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Referencing a weak ‘self’ in Swift Protocol Extensions</h1>
+                    <h2 class="headline">
+                    February 14, 2016
+                    <br>
+                    
+                    
+                        
+                            <a href="https://petethedeveloper.comtags/swiftlang">swiftlang</a>
+                        
+                            <a href="https://petethedeveloper.comtags/ios">ios</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                <section id="post-body">
+                    <p>I recently released Bikey for iOS. It’s an app that helps you to find the nearest city bike station, providing you with information such as available bikes/parking spaces, distance to station etc.</p>
+
+<p><img src="/images/posts/weakSelfSwiftProtocolImage1.png" alt="Bikey screenshot" title="Bikey screenshot" /></p>
+
+<p>It’s written entirely in Swift, and during it’s development I encountered an interesting problem.</p>
+
+<p>I had created a protocol with an accompianing protocol extension. The extension contained a base implementation of one of my protocol functions. In this function implementation, I was making a network request which needed to call another of the protocol functions in it’s completion closure. Being mindful of retain cycles, I wanted to use a weak reference to self when calling this other protocol function. I have re-created this scenario in the following code;</p>
+
+<p><img src="/images/posts/weakSelfSwiftProtocolImage2.png" alt="Code snippet 2" title="Code snippet 2" /></p>
+
+<p>As you can see, trying to create a weak reference to self doesn’t work. But why? Well, the reason is that we can’t create a weak reference to a value type (e.g. Array, String, etc…) because these are structs and not classes. We can only create weak references to class types.</p>
+
+<p>So, how to solve this? It turns out there are a couple to ways to solve this, but the solution I chose was to simply indicate that the protocol is of class type, as follows;</p>
+
+<p><img src="/images/posts/weakSelfSwiftProtocolImage3.png" alt="Code snippet 3" title="Code snippet 3" /></p>
+
+<p>This allowed me to safely reference self in my closure, which in turn meant that Bikey finally made it in to the app store.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/superpeteblaze">
+                        <img class="avatar" src="https://petethedeveloper.comimages/avatar.jpg">
+                        <div>
+                            <span class="dark">Pete Smith</span>
+                            <span>I&#39;m Pete, an Enginner and iOS Developer</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fpetethedeveloper.com%2fpost%2fweakSelfSwiftProtocol%2f - Referencing%20a%20weak%20%e2%80%98self%e2%80%99%20in%20Swift%20Protocol%20Extensions by @superpeteblaze"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'petethedeveloper';
+    var disqus_identifier = 'https:\/\/petethedeveloper.com\/post\/weakSelfSwiftProtocol\/';
+    var disqus_title = 'Referencing a weak ‘self’ in Swift Protocol Extensions';
+    var disqus_url = 'https:\/\/petethedeveloper.com\/post\/weakSelfSwiftProtocol\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/about/">About<aside class="dates">Oct 22</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/uiSearchBarIconColors/">Swiftly changing a UISearchBar’s clear icon color<aside class="dates">Oct 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swift3Cocoapods/">Swift 3 &amp; CocoaPods<aside class="dates">Sep 24</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/ios10Widget/">iOS 10: Getting your Widget ready in 2 simple steps<aside class="dates">Aug 16</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/migratingToSwift3/">Migrating an App to Swift 3<aside class="dates">Aug 9</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swiftStateManagement/">Swift and State management<aside class="dates">Jun 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swiftLocationBasedWidget/">Swift-ly creating a location-based iOS Today Widget<aside class="dates">Mar 24</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/weakSelfSwiftProtocol/">Referencing a weak ‘self’ in Swift Protocol Extensions<aside class="dates">Feb 14</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.facebook.com/superpeteblaze">
+        circlefacebook
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/superpeteblaze">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="http://stackexchange.com/users/294929/superpeteblaze">
+        circlestackoverflow
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/superpeteblaze">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2016 Pete Smith
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://petethedeveloper.comjs/main.js"></script>
+<script src="https://petethedeveloper.comjs/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

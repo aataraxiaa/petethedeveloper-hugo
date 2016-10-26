@@ -1,0 +1,274 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Pete Smith">
+		<meta name="description" content="Describe your website">
+		<meta name="generator" content="Hugo 0.17" />
+		<title>Swift-ly creating a location-based iOS Today Widget &middot; Pete Smith</title>
+		<link rel="shortcut icon" href="https://petethedeveloper.comimages/favicon.ico">
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/style.css">
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://petethedeveloper.comcss/monosocialiconsfont.css">
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://petethedeveloper.com'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='https://petethedeveloper.comabout'>About</a>
+	
+
+	
+		<a href='https://petethedeveloper.comapps'>Apps</a>
+	
+
+	
+		<a href='https://petethedeveloper.comopensource'>Open source</a>
+	
+
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Swift-ly creating a location-based iOS Today Widget</h1>
+                    <h2 class="headline">
+                    March 24, 2016
+                    <br>
+                    
+                    
+                        
+                            <a href="https://petethedeveloper.comtags/swiftlang">swiftlang</a>
+                        
+                            <a href="https://petethedeveloper.comtags/ios">ios</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                <section id="post-body">
+                    <p>With the latest update of Bikey, I added a Today Widget (Extension), providing users with quick and easy access to information about their nearest bike station.</p>
+
+<p><img src="/images/posts/swiftLocationBasedWidgetImage1.png" alt="Bikey today extension" title="Bikey today extension" /></p>
+
+<p>Creating such a Today Widget, which is based on the user’s location, is accomplished as follows (this assumes that location access for the containing app/widget has been granted);</p>
+
+<ul>
+<li>Add a Today Widget to our app. This gives us a ready-made view controller which implements the NCWidgetProviding protocol. This protocol provides the ability to customize the appearance and behavior of our Widget. We add the following properties to our view controller;</li>
+</ul>
+
+<pre><code class="language-swift">// This is used to let our widget know an update is required or not
+private var updateResult = NCUpdateResult.NoData
+// We use a lazy instance of CLLocationManager to get the user's location
+lazy private var locman = CLLocationManager()
+</code></pre>
+
+<ul>
+<li>In our viewDidLoad and viewWillAppear functions we set our location manager delegate and request location updates respectively;</li>
+</ul>
+
+<pre><code class="language-swift">override func viewDidLoad() {
+   super.viewDidLoad()
+
+   locman.delegate = self
+}
+override func viewWillAppear(animated: Bool) {          
+   super.viewWillAppear(animated)
+   locman.startUpdatingLocation()
+}
+</code></pre>
+
+<ul>
+<li>In the CLLLocationMangerDelegate function didUpdateLocations,we use our retrieved location data, and set our Widget update result to NewData;</li>
+</ul>
+
+<pre><code class="language-swift">func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+   // Do stuff with the retrieved location, update our display and  
+   then set our update result to NewData
+   // doStuff()
+   updateDisplay()
+   updateResult = .NewData
+}
+</code></pre>
+
+<ul>
+<li>Finally, in our NCWidgetProviding protocol function widgetPerformUpdateWithCompletionHandler, we use our update result to indicate that a Widget update is required;</li>
+</ul>
+
+<pre><code class="language-swift">func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -&gt; Void)) {
+   // If an error is encountered, use NCUpdateResult.Failed
+   // If there’s no update required, use NCUpdateResult.NoData
+   // If there’s an update, use NCUpdateResult.NewData
+   completionHandler(updateResult)
+}
+</code></pre>
+
+<p>That’s it! We can now display location-based data in our iOS Today Widget.</p>
+
+<p>Of course, we can iterate on this and add error handling etc., but this is enough to get us started.</p>
+
+<p>The full Gist can be found <a href="https://gist.github.com/superpeteblaze/eca594903710ab032086">here</a>.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/superpeteblaze">
+                        <img class="avatar" src="https://petethedeveloper.comimages/avatar.jpg">
+                        <div>
+                            <span class="dark">Pete Smith</span>
+                            <span>I&#39;m Pete, an Enginner and iOS Developer</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fpetethedeveloper.com%2fpost%2fswiftLocationBasedWidget%2f - Swift-ly%20creating%20a%20location-based%20iOS%20Today%20Widget by @superpeteblaze"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'petethedeveloper';
+    var disqus_identifier = 'https:\/\/petethedeveloper.com\/post\/swiftLocationBasedWidget\/';
+    var disqus_title = 'Swift-ly creating a location-based iOS Today Widget';
+    var disqus_url = 'https:\/\/petethedeveloper.com\/post\/swiftLocationBasedWidget\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/about/">About<aside class="dates">Oct 22</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/uiSearchBarIconColors/">Swiftly changing a UISearchBar’s clear icon color<aside class="dates">Oct 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swift3Cocoapods/">Swift 3 &amp; CocoaPods<aside class="dates">Sep 24</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/ios10Widget/">iOS 10: Getting your Widget ready in 2 simple steps<aside class="dates">Aug 16</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/migratingToSwift3/">Migrating an App to Swift 3<aside class="dates">Aug 9</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swiftStateManagement/">Swift and State management<aside class="dates">Jun 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/swiftLocationBasedWidget/">Swift-ly creating a location-based iOS Today Widget<aside class="dates">Mar 24</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://petethedeveloper.com/post/weakSelfSwiftProtocol/">Referencing a weak ‘self’ in Swift Protocol Extensions<aside class="dates">Feb 14</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.facebook.com/superpeteblaze">
+        circlefacebook
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/superpeteblaze">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="http://stackexchange.com/users/294929/superpeteblaze">
+        circlestackoverflow
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/superpeteblaze">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2016 Pete Smith
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://petethedeveloper.comjs/main.js"></script>
+<script src="https://petethedeveloper.comjs/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

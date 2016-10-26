@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About-rsses on Pete Smith</title>
+    <link>https://petethedeveloper.com/about/index.xml</link>
+    <description>Recent content in About-rsses on Pete Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Oct 2016 10:25:16 +0100</lastBuildDate>
+    <atom:link href="https://petethedeveloper.com/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>https://petethedeveloper.com/about/</link>
+      <pubDate>Sat, 22 Oct 2016 10:25:16 +0100</pubDate>
+      
+      <guid>https://petethedeveloper.com/about/</guid>
+      <description>
+
+&lt;h4 id=&#34;me&#34;&gt;Me&lt;/h4&gt;
+
+&lt;p&gt;I&amp;rsquo;m Pete, an engineer &amp;amp; iOS developer. I have worked in software since 2011, and have been developing iOS apps since 2013.
+I am currently in a loving relationship with Swift, but of course still find time for my old flame Obj-C.&lt;/p&gt;
+
+&lt;p&gt;I love building things, and I am always toying with new ideas. My latest app is &lt;a href=&#34;https://itunes.apple.com/ie/app/bikey/id1048962300?mt=8&#34;&gt;Bikey&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;apps&#34;&gt;Apps&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://itunes.apple.com/ie/app/bikey/id1048962300?mt=8&#34;&gt;Bikey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://itunes.apple.com/de/app/zendesk/id368796007?l=en&amp;amp;mt=8&#34;&gt;Zendesk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/ibm-connections-meetings/id516570259?mt=8&#34;&gt;IBM Connections Meetings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;teams&#34;&gt;Teams&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Zendesk mobile team (current)&lt;/li&gt;
+&lt;li&gt;IBM mobile team&lt;/li&gt;
+&lt;li&gt;Ericsson telephony&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;contact-me&#34;&gt;Contact me&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;mailto:peadar81@gmail.com&#34;&gt;peadar81@gmail.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

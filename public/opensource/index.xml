@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opensource-rsses on Pete Smith</title>
+    <link>https://petethedeveloper.com/opensource/index.xml</link>
+    <description>Recent content in Opensource-rsses on Pete Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Oct 2016 11:01:45 +0100</lastBuildDate>
+    <atom:link href="https://petethedeveloper.com/opensource/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Open source</title>
+      <link>https://petethedeveloper.com/opensource/</link>
+      <pubDate>Sat, 22 Oct 2016 11:01:45 +0100</pubDate>
+      
+      <guid>https://petethedeveloper.com/opensource/</guid>
+      <description>
+
+&lt;h4 id=&#34;libraries&#34;&gt;Libraries&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/superpeteblaze/BikeProvider&#34;&gt;BikeProvider&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;deprecated&#34;&gt;Deprecated&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/superpeteblaze/SwiftyClusters&#34;&gt;SwiftyClusters&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
