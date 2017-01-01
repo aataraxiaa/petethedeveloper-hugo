@@ -10,8 +10,8 @@ disqusShortname = "petethedeveloper"
 
 [params]
 	name = "Pete Smith"
-	description = "Describe your website"
-	bio = "iOS Developer - Engineer - Swifter"
+	description = "I'm Pete, an Enginner and iOS Developer, and this is my personal site where I blog and reference my projects"
+	bio = "Swift - iOS - Engineering"
 	# Enter optionally your twitter account
 	twitter = "superpeteblaze"
 	enableRSS = false
