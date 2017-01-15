@@ -1,7 +1,6 @@
 +++
 date = "2016-12-19T11:04:12+01:00"
 title = "iOS custom keyboard dismissal with Swift"
-description = "On a recent project, we were charged with implementing a custom, and slightly..."
 tags = [
     "swiftlang",
     "ios",

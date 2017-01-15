@@ -1,7 +1,6 @@
 +++
 date = "2016-08-16T11:04:12+01:00"
 title = "iOS 10: Getting your Widget ready in 2 simple steps"
-description = "iOS 10 turns widgets in to super-widgets. They now appear on the Home screen..."
 tags = [
     "ios",
 ]

@@ -1,7 +1,6 @@
 +++
 date = "2016-08-09T11:04:12+01:00"
 title = "Migrating an App to Swift 3"
-description = "I recently migrated Bikey to Swift 3…and I actually (reasonably) enjoyed the process. I..."
 tags = [
     "swiftlang",
     "ios",

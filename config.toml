@@ -1,53 +1,42 @@
-# Site settings
 baseurl = "http://superpeteblaze.github.io/"
-languageCode = "en-us"
 title = "Pete Smith"
-theme = "hugo-cactus-theme"
-# Enter your tracking code to enable Google Analytics
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Pete Smith"
 googleAnalytics = "UA-73366940-2"
-# Disable comments by leaving disqusShortname empty
 disqusShortname = "petethedeveloper"
 
-[params]
-	name = "Pete Smith"
-	description = "I'm Pete, an Enginner and iOS Developer, and this is my personal site where I blog and reference my projects"
-	bio = "Swift - iOS - Engineering"
-	# Enter optionally your twitter account
-	twitter = "superpeteblaze"
-	enableRSS = false
+[Author]
+    name = "Pete Smith"
 
-	# Add custom assets with their paths relative to the static folder
-	customCSS = []
-	customJS  = []
+[Taxonomies]
+    tag = "tags"
 
-	# The variables below are optionally too and can be used to
-	# translate or customize each string of the theme.
+[Params]
+    intro = true
+    headline = "Pete Smith"
+    description = "Swift - iOS - Engineering"
+    github = "https://www.github.com/superpeteblaze"
+    linkedin = "https://ie.linkedin.com/in/petethedeveloper"
+    twitter = "https://www.twitter.com/superpeteblaze"
+    stackoverflow = "http://stackexchange.com/users/294929/superpeteblaze"
+    email = "peadar81@gmail.com"
+    opengraph = true
 
-	# Navigation links
-	home = ""
-	about = ""
-	apps = ""
-	# Pagination links
-	olderPosts = ""
-	newerPosts = ""
-	readMore = ""
-	copyright = ""
-	# Sharing options and author information in posts
-	aboutAuthor = "I'm Pete, an Enginner and iOS Developer"
-	tweet = ""
-	share = ""
-	# 404 page
-	title404 = ""
-	subtitle404 = ""
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
 
-	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-	iconFont = "mono-social"
-    # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-    socialIconStyle = "circle"
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
 
-# Add additional social link entries underneath
-[social]
-		stackoverflow = "http://stackexchange.com/users/294929/superpeteblaze"
-    twitter  = "https://www.twitter.com/superpeteblaze"
-    facebook = "https://www.facebook.com/superpeteblaze"
-    github   = "https://www.github.com/superpeteblaze"
+[[menu.main]]
+    name = "Apps"
+    url = "/apps/"
+    weight = 2
+
+[[menu.main]]
+    name = "Opensource"
+    url = "/opensource/"
+    weight = 3

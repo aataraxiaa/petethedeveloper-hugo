@@ -1,7 +1,6 @@
 +++
 date = "2016-06-28T11:04:12+01:00"
 title = "Swift and State management"
-description = "I was recently refactoring a UIViewController which had a large number of states. The view..."
 tags = [
     "swiftlang",
     "ios",

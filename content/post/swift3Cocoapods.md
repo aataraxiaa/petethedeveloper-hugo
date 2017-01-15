@@ -1,7 +1,6 @@
 +++
 date = "2016-09-24T11:04:12+01:00"
 title = "Swift 3 & CocoaPods"
-description = "Have a CocoaPod which you updated to Swift 3? Great! Want to submit this updated Podspec to..."
 tags = [
     "swiftlang",
     "ios",

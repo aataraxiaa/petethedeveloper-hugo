@@ -1,7 +1,6 @@
 +++
 date = "2016-02-14T11:04:12+01:00"
 title = "Referencing a weak ‘self’ in Swift Protocol Extensions"
-description = "I recently released Bikey for iOS. It’s an app that helps you to find the nearest city bike station..."
 tags = [
     "swiftlang",
     "ios",

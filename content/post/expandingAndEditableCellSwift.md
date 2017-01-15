@@ -1,7 +1,6 @@
 +++
 date = "2017-01-01T11:04:12+01:00"
 title = "Expanding & editable iOS table cell in Swift"
-description = "We recently implemented a feature which allows users to enter arbitrary amounts of text..."
 tags = [
     "swiftlang",
     "ios",

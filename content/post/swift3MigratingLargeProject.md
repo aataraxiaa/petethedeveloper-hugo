@@ -1,7 +1,6 @@
 +++
-date = "2017-01-08"
+date = "2017-01-15"
 title = "Swift 3: Migrating a large project "
-description = "The official Swift 3 release is a distant (but fond) memory, yet many of us are only now migrating..."
 tags = [
     "swiftlang",
     "ios",

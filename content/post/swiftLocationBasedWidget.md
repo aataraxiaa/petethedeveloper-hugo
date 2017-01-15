@@ -1,7 +1,6 @@
 +++
 date = "2016-03-24T11:04:12+01:00"
 title = "Swift-ly creating a location-based iOS Today Widget"
-description = "With the latest update of Bikey, I added a Today Widget (Extension), providing users with quick..."
 tags = [
     "swiftlang",
     "ios",

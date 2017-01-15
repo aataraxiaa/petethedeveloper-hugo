@@ -1,7 +1,6 @@
 +++
 date = "2016-10-05T11:04:12+01:00"
 title = "Swiftly changing a UISearchBar’s clear icon color"
-description = "We recently needed to customize the color of a UISearchBar’s clear button. In case you..."
 tags = [
     "swiftlang",
     "ios",
