@@ -144,7 +144,7 @@ let providerSuccess = { (response: Any) in ...}
 let providerError =  { (error: Error) in ... }
 ```
 
-* We make extension use of protocols in our code. Some of these protocols declare methods which take closure expressions as parameters. In types which conformed to such protocols, where it was clear from the protocol method definition that a closure parameter escaped, the @escaping annotation was correctly added to the method signature by the migration tool. However…the @escapingannotation was not added to the protocol method signature. Thus, as the method signatures in the protocol and the conforming type did not match, we ended up with build failures due to types conforming to protocols not implementing all required methods:
+* We make extensive use of protocols in our code. Some of these protocols declare methods which take closure expressions as parameters. In types which conformed to such protocols, where it was clear from the protocol method definition that a closure parameter escaped, the @escaping annotation was correctly added to the method signature by the migration tool. However…the @escapingannotation was not added to the protocol method signature. Thus, as the method signatures in the protocol and the conforming type did not match, we ended up with build failures due to types conforming to protocols not implementing all required methods:
 
 ```
 // Original protocol declaration
