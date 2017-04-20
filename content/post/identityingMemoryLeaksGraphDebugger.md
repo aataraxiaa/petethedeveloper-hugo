@@ -13,8 +13,11 @@ categories = [
 +++
 
 In this short post I describe,
+
 * What the Xcode memory graph debugger is
+
 * How to use it, and some tips
+
 * It’s pros/cons
 
 ---
@@ -61,12 +64,12 @@ Leaks are displayed in the debug navigator as follows:
 
 ## Tips
 
-* #1: To help identify memory leaks, we can filter the heap contents to only show leaks using the following:
+* To help identify memory leaks, we can filter the heap contents to only show leaks using the following:
 
 ![Filteringformemoryleaks][retainCyclesMemoryLeaksImage5]
 [retainCyclesMemoryLeaksImage5]: /images/posts/retainCyclesMemoryLeaksImage5.png "Filtering for memory leaks"
 
-* #2: The runtime issue navigator is also useful, displaying the total number of leaks identified:
+*  The runtime issue navigator is also useful, displaying the total number of leaks identified:
 
 ![Lotsof(apparent)memoryleaks!][retainCyclesMemoryLeaksImage6]
 [retainCyclesMemoryLeaksImage6]: /images/posts/retainCyclesMemoryLeaksImage6.png "Lots of (apparent) memory leaks!"
