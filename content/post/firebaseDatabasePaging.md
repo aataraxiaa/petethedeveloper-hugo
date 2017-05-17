@@ -31,7 +31,7 @@ They sure do. Most RESTful APIs allow the caller to specify a page parameter.
 
 If you are using a Firebase Database for your remote date storage, and using it’s realtime synchornization feature to keep your local client-side data up to date, you don’t get paging for free.
 
-## What’s Firebase Database
+## What’s Firebase Database?
 
 From the docs:
 
