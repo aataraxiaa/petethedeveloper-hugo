@@ -1,42 +1,97 @@
+# baseurl = "http://superpeteblaze.github.io/"
+# title = "Pete Smith"
+# theme = "hugo-cactus-theme"
+# languageCode = "en-us"
+# copyright = "Pete Smith"
+# googleAnalytics = "UA-73366940-2"
+# disqusShortname = "petethedeveloper"
+#
+# [Author]
+#     name = "Pete Smith"
+#
+# [Taxonomies]
+#     tag = "tags"
+#
+# [Params]
+#     intro = true
+#     headline = "Pete Smith"
+#     description = "Swift - iOS - Engineering"
+#     github = "https://www.github.com/superpeteblaze"
+#     linkedin = "https://ie.linkedin.com/in/petethedeveloper"
+#     twitter = "https://www.twitter.com/superpeteblaze"
+#     stackoverflow = "http://stackexchange.com/users/294929/superpeteblaze"
+#     email = "peadar81@gmail.com"
+#     opengraph = true
+#
+# [Permalinks]
+#     post = "/:year/:month/:day/:filename/"
+#
+# [[menu.main]]
+#     name = "About"
+#     url = "/about/"
+#     weight = 1
+#
+# [[menu.main]]
+#     name = "Apps"
+#     url = "/apps/"
+#     weight = 2
+#
+# [[menu.main]]
+#     name = "Opensource"
+#     url = "/opensource/"
+#     weight = 3
+
+# Site settings
 baseurl = "http://superpeteblaze.github.io/"
-title = "Pete Smith"
-theme = "ghostwriter"
 languageCode = "en-us"
-copyright = "Pete Smith"
+title = "Pete Smith"
+theme = "hugo-cactus-theme"
+# Enter your tracking code to enable Google Analytics
 googleAnalytics = "UA-73366940-2"
+# Disable comments by leaving disqusShortname empty
 disqusShortname = "petethedeveloper"
 
-[Author]
-    name = "Pete Smith"
+[params]
+	name = "Pete Smith"
+	description = "Swift - iOS - Engineering"
+	bio = "Swift - iOS - Engineering"
+	# Enter optionally your twitter account
+	twitter = "https://www.twitter.com/superpeteblaze"
+	enableRSS = true
 
-[Taxonomies]
-    tag = "tags"
+	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
+	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
+	customCSS = []
+	customJS  = []
 
-[Params]
-    intro = true
-    headline = "Pete Smith"
-    description = "Swift - iOS - Engineering"
-    github = "https://www.github.com/superpeteblaze"
-    linkedin = "https://ie.linkedin.com/in/petethedeveloper"
-    twitter = "https://www.twitter.com/superpeteblaze"
-    stackoverflow = "http://stackexchange.com/users/294929/superpeteblaze"
-    email = "peadar81@gmail.com"
-    opengraph = true
+	# The variables below are optionally too and can be used to
+	# translate or customize each string of the theme.
 
-[Permalinks]
-    post = "/:year/:month/:day/:filename/"
+	# Navigation links
+	home = ""
+	subscribe = ""
+  about = ""
+  apps = ""
+  opensource = ""
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+	# Sharing options and author information in posts
+	aboutAuthor = "I'm Pete, an engineer and iOS developer"
+	tweet = ""
+	share = ""
+	# 404 page
+	title404 = ""
+	subtitle404 = ""
 
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 1
+	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
+	iconFont = "mono-social"
+    # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
+    socialIconStyle = "circle"
 
-[[menu.main]]
-    name = "Apps"
-    url = "/apps/"
-    weight = 2
-
-[[menu.main]]
-    name = "Opensource"
-    url = "/opensource/"
-    weight = 3
+# Add additional social link entries underneath
+[social]
+    twitter  = "https://www.twitter.com/superpeteblaze"
+    github   = "https://www.github.com/superpeteblaze"
