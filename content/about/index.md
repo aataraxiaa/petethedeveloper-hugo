@@ -7,7 +7,7 @@ title = "About"
 
 #### Me
 I'm Pete, an engineer & iOS developer. I have worked in software since 2011, and have been developing iOS apps since 2013.
-I am currently in a loving relationship with Swift, but of course still find time for my old flame Obj-C.
+I am currently in a loving relationship with Swift, and I curate [freshswift.net](https://freshswift.net).
 
 I love building things, and I am always toying with new ideas. My latest app is [Bikey](https://itunes.apple.com/ie/app/bikey/id1048962300?mt=8).
 
@@ -15,7 +15,8 @@ I love building things, and I am always toying with new ideas. My latest app is 
 
 #### Apps
 * [Bikey](https://itunes.apple.com/ie/app/bikey/id1048962300?mt=8)
-* [Zendesk](https://itunes.apple.com/de/app/zendesk/id368796007?l=en&mt=8)
+* [Zendesk Support](https://itunes.apple.com/ie/app/zendesk-support/id1174276185?mt=8)
+* [Zendesk for iPad](https://itunes.apple.com/ie/app/zendesk-for-ipad/id1164474048?mt=8)
 * [IBM Connections Meetings](https://itunes.apple.com/us/app/ibm-connections-meetings/id516570259?mt=8)
 
 ***
