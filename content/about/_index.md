@@ -1,8 +1,6 @@
 +++
-description = ""
-date = "2016-10-22T10:25:16+01:00"
 title = "About"
-
+hidden = true
 +++
 
 #### Me

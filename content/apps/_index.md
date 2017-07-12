@@ -1,9 +1,6 @@
 +++
 title = "Apps"
 hidden = true
-description = ""
-date = "2016-10-22T10:41:15+01:00"
-
 +++
 
 ### Personal iOS Apps

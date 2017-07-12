@@ -1,46 +1,3 @@
-# baseurl = "http://superpeteblaze.github.io/"
-# title = "Pete Smith"
-# theme = "hugo-cactus-theme"
-# languageCode = "en-us"
-# copyright = "Pete Smith"
-# googleAnalytics = "UA-73366940-2"
-# disqusShortname = "petethedeveloper"
-#
-# [Author]
-#     name = "Pete Smith"
-#
-# [Taxonomies]
-#     tag = "tags"
-#
-# [Params]
-#     intro = true
-#     headline = "Pete Smith"
-#     description = "Swift - iOS - Engineering"
-#     github = "https://www.github.com/superpeteblaze"
-#     linkedin = "https://ie.linkedin.com/in/petethedeveloper"
-#     twitter = "https://www.twitter.com/superpeteblaze"
-#     stackoverflow = "http://stackexchange.com/users/294929/superpeteblaze"
-#     email = "peadar81@gmail.com"
-#     opengraph = true
-#
-# [Permalinks]
-#     post = "/:year/:month/:day/:filename/"
-#
-# [[menu.main]]
-#     name = "About"
-#     url = "/about/"
-#     weight = 1
-#
-# [[menu.main]]
-#     name = "Apps"
-#     url = "/apps/"
-#     weight = 2
-#
-# [[menu.main]]
-#     name = "Opensource"
-#     url = "/opensource/"
-#     weight = 3
-
 # Site settings
 baseurl = "http://superpeteblaze.github.io/"
 languageCode = "en-us"
@@ -57,7 +14,7 @@ disqusShortname = "petethedeveloper"
 	bio = "Swift - iOS - Engineering"
 	# Enter optionally your twitter account
 	twitter = "https://www.twitter.com/superpeteblaze"
-	enableRSS = true
+	enableRSS = false
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
 	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -70,9 +27,9 @@ disqusShortname = "petethedeveloper"
 	# Navigation links
 	home = ""
 	subscribe = ""
-  about = ""
-  apps = ""
-  opensource = ""
+  about = "About"
+  apps = "Apps"
+  opensource = "Open source"
 	# Pagination links
 	olderPosts = ""
 	newerPosts = ""
