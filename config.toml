@@ -6,7 +6,7 @@ theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = "UA-73366940-2"
 # Disable comments by leaving disqusShortname empty
-disqusShortname = "petethedeveloper"
+disqusShortname = ""
 
 [params]
 	name = "Pete Smith"
@@ -26,10 +26,9 @@ disqusShortname = "petethedeveloper"
 
 	# Navigation links
 	home = ""
-	subscribe = ""
   about = "About"
-  apps = "Apps"
-  opensource = "Open source"
+	apps = "Apps"
+	opensource = "Open source"
 	# Pagination links
 	olderPosts = ""
 	newerPosts = ""
