@@ -24,8 +24,8 @@ Featured on the App store 'Hot this week'
 #### [Zendesk Support](https://itunes.apple.com/ie/app/zendesk-support/id1174276185?mt=8)
 Zendesk Support for iPhone is built for team leaders and agents on the move. Zendesk builds software for better customer relationships. Zendesk Support is a beautifully simple system for tracking, prioritizing, and solving customer support tickets.
 
-![Zendesk screenshot][zendeskScreenShot]
-[zendeskScreenShot]: /images/portfolio/zendeskScreenShot_Small.png "Zendesk screenshot"
+![Scarlett screenshot][scarlettScreenShot]
+[scarlettScreenShot]: /images/portfolio/scarlettScreenShot_Small.png "Scarlett screenshot"
 
 #### [Zendesk for iPad](https://itunes.apple.com/ie/app/zendesk-for-ipad/id1164474048?mt=8)
 Zendesk mobile app for iOS gives agents, admins, and managers the power of Zendesk on the go. Whether you are in a meeting, working from home, or scaling the tall peaks of a mountain with no hands while you casually scan the ticket comments on your iPad, the Zendesk mobile app will be there for you, so you can provide great service for your customers.
