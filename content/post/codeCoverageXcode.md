@@ -1,6 +1,6 @@
 +++
 date = "2018-02-21T11:04:12+01:00"
-title = "Code Coverage & Xcode"
+title = "Code Coverage and Xcode"
 tags = [
     "xcode",
     "swift",
@@ -15,11 +15,11 @@ categories = [
 +++
 [Unit testing](https://en.wikipedia.org/wiki/Unit_testing) is invaluable in helping us to identify problems early in the development cycle, both in terms of the implementation and the specification. It also facilitates change, providing confidence that any future changes to the tested code won’t break it’s expected behaviour.
  
-Key to unit testing is [code coverage](https://en.wikipedia.org/wiki/Code_coverage), which indicates what % of the tested code was executed when the corresponding unit tests were run. Ideally, good unit tests would result in 100% code coverage. That is, 100% of the target code was executed when the corresponding unit tests were run. 
+Key to unit testing is [code coverage](https://en.wikipedia.org/wiki/Code_coverage), which indicates what % of the tested code was executed when the corresponding unit tests were run. Generally, we want to have a high percentage of code coverage. 
 
 Xcode 7 [introduced](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/07-code_coverage.html) a code coverage feature which allows us to measure and visualize code coverage.
 
-In this short post, we will learn;
+In this short post, we will learn:
 
 * How to measure code coverage in Xcode
 * How to increase code coverage
@@ -61,7 +61,7 @@ Now that we know how to measure unit test code coverage, lets see how we can inc
 
 A good approach to take is to work through all the types in our project, adding tests where possible for each type. 
 
-This can broken down into two steps;
+This can be broken down into two steps;
 
 1. If possible, ensure every public method has at least one corresponding test
 
@@ -69,7 +69,7 @@ This can broken down into two steps;
 
 We will concentrate on `CityProvider.swift` (whose coverage report is expanded in the previous image), which right now has ~36% code coverage. 
 
-This file consists of 4 public static methods, and 1 private static method. It currently has 3 corresponding tests. We should ideally be testing each ‘unit’ of code, so we can first start by adding a test for each for our 4 public methods. 
+This file consists of 4 public static methods and 1 private static method. It currently has 3 corresponding tests. We should ideally be testing each ‘unit’ of code, so we can first start by adding a test for each for our 4 public methods. 
 
 Once we have at least one test for each method, we run the tests again, and check our coverage;
 
@@ -82,7 +82,7 @@ Awesome, just by adding 1 more test, we have increased code coverage for `CityPr
 
 Now that we have at least some coverage for every method in `CityProvider.swift`, we can take advantage of Xcode’s code coverage measuring capabilities and take a look at exactly what lines of code are being executed by our tests. 
 
-In the coverage report, double-click the file we want to investigate, in this case `CityProvider.swift`. This will open the source editor, but it will look a bit different now that we have enabled code coverage reporting. We now see that on the left, the source editor is highlighting code what has **not** been executed by our tests, i.e it highlights areas that **require** code coverage. Hovering over one of these red-colored areas further highlights the lines which were not executed;
+In the coverage report, double-click the file we want to investigate, in this case `CityProvider.swift`. This will open the source editor, but it will look a bit different now that we have enabled code coverage reporting. We now see that on the left, the source editor is highlighting code what has **not** been executed by our tests; i.e it highlights areas that **require** code coverage. Hovering over one of these red-colored areas further highlights the lines which were not executed;
 
 ![Unexecuted code highlighted in the Xcode source editor][codeCoverageXcode_image6.png]
 [codeCoverageXcode_image6.png]: /images/posts/codeCoverageXcode_image6.png "Unexecuted code highlighted in the Xcode source editor"
