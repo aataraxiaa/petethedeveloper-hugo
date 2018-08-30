@@ -27,7 +27,7 @@ When building a project which uses R.swift with Xcode 10, the build will fail wi
 ## Why This Happens
 
 R.swift is integrated in to projects using an Xcode build script phase. This phase generates a Swift file, `R.generated.swift` which will be compiled when the project is built.
-The build fails because Xcode 10, with it's new parallelizing build system, is trying to locate the R.generated.swift file **before** it has been created.
+The build fails because Xcode 10, with it's new parallelizing build system, is trying to locate the R.generated.swift file *before* it has been created.
 
 ## The Solution
 
